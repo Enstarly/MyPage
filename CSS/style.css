@@ -1,0 +1,269 @@
+:root {
+  --primary-color: #062424;
+  --secondary-color: #e7dfd8;
+  --background-color: #f9f9fa;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-size: 25px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #888;
+}
+
+.main {
+  max-width: 2100px;
+  min-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  flex-wrap: wrap;
+  background-color: var(--background-color);
+}
+
+.main__img,
+.message__img {
+  width: 100%;
+  height: 100%;
+}
+
+.main__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: start;
+  padding: 25px;
+  color: var(--primary-color);
+}
+
+.main__title {
+  text-wrap: balance;
+  font-size: 3em;
+}
+
+.main__text {
+  text-wrap: balance;
+  font-size: 1.5em;
+}
+
+.main__button {
+  padding: 10px 100px;
+  font-size: 1em;
+  cursor: pointer;
+  color: var(--primary-color);
+  border: 1px solid #111;
+}
+
+@media screen and (max-width: 1000px) {
+  * {
+    font-size: 23px;
+  }
+  .main__content {
+    align-items: center;
+  }
+
+  .main__title {
+    text-align: center;
+  }
+
+  .main__text {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  * {
+    font-size: 20px;
+  }
+  .main {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+  .message__content {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
+}
+
+.message {
+  width: 100%;
+  max-width: 2100px;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 0 10vw;
+  min-height: 100vh;
+  justify-content: center;
+}
+
+.message__content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  justify-content: baseline;
+  padding: 10vh 0;
+  gap: 15px;
+}
+
+.message__title {
+  font-size: 3em;
+  margin: 0;
+}
+
+.message__text {
+  font-size: 1em;
+  margin: 0;
+  text-wrap: wrap;
+}
+
+.photos-importants,
+.letters {
+  max-width: 2100px;
+  min-height: 100vh;
+  width: 100%;
+  font-size: 20px;
+  color: #062424;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--background-color);
+}
+
+.photos-importants__container,
+.letters__container{
+  display: grid;
+  width: 100%;
+}
+
+.photos-importants__title,
+.letters__title {
+  font-size: 2.5em;
+  text-align: center;
+  margin-bottom: 2.5vh;
+}
+
+.photos-importants > div,
+.letters > div {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2.5vw;
+  width: 100%;
+  text-align: center;
+}
+
+.photos-importants__cards,
+.cards{
+  width: 350px;
+}
+
+.photos-importants__img,
+.image_view{
+  width: 100%;
+  height: 70vh;
+  cursor: pointer;
+}
+
+/*SECTION BESTPHOTOS*/
+
+.bestPhotos {
+  font-size: 20px;
+  color: #062424;
+  background-color: #E7DFD8;
+  width: 100%;
+  max-width: 2100px;
+  display: grid;
+  grid-template-rows: repeat(auto-fit, minmax(25px,1fr));
+}
+
+.bestPhotos__title {
+  font-size: 2.5em;
+  margin: 5vh;
+  font-weight: 800;
+}
+
+.bestPhotos__bestCard {
+  min-height: 100vh;
+  min-width: 200px;
+  max-width: 1000px;
+  margin-left: auto;
+  margin-right: 0;
+}
+
+.bestPhotos > :nth-child(3){
+  min-height: 100vh;
+  min-width: 200px;
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: 0;
+}
+
+.bestPhotos__bestCard-img {
+  width: 100%;
+  height: 80%;
+  box-shadow: 0 0 5px 0 black;
+}
+
+.bestPhotos__bestCard-title {
+  margin: 0;
+}
+
+.bestPhotos__bestCard-text {
+  width: 100%;
+  margin: 0;
+  margin-bottom: 5vh;
+}
+
+/*FOOTER*/
+.sectionFooter {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #062424;
+  color: white;
+  font-size: 20px;
+  max-width: 2100px;
+}
+
+.sectionFooter__img {
+  width: 100%;
+  height: 450px;
+}
+
+.sectionFooter__footer {
+  padding: 2.5vh;
+  display: grid;
+  max-width: 1500px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  flex-wrap: wrap;
+  margin: 0;
+  margin: auto;
+}
+
+.sectionFooter__title {
+  font-size: 2.2em;
+  margin: 0;
+  text-wrap: balance;
+}
+
+.sectionFooter__text{
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.sectionFooter__button {
+  font-size: 0.8em;
+  width: 50%;
+  padding: 1.5vh;
+  border: 1px solid black;
+  color: #062424;
+  box-shadow: 0 0 3px 0 black;
+  cursor: pointer;
+}
+

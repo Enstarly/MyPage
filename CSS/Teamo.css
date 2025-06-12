@@ -1,0 +1,32 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff0f5;
+  font-family: "Georgia", serif;
+  color: #333;
+  padding: 40px;
+  max-width: 700px;
+  margin: auto;
+  border: 2px solid #ff69b4;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+}
+h1 {
+  color: #ff1493;
+  text-align: center;
+  font-size: 2.5em;
+}
+p {
+  font-size: 1.2em;
+  line-height: 1.7;
+  margin: 20px 0;
+}
+.firma {
+  text-align: right;
+  margin-top: 40px;
+  font-style: italic;
+}
